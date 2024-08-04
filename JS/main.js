@@ -467,3 +467,17 @@ close_register.addEventListener("click", ()=>{
     box_preview.style.display = "flex";
   }
 })
+
+let lines_btn_nav = document.querySelector(".lines_btn_nav");
+let nav_responsive = document.querySelector(".nav_responsive");
+let btn_close_nav = document.querySelector(".btn_close_nav");
+
+lines_btn_nav.addEventListener("click", ()=>{
+  nav_responsive.classList.add("nav_responsive_a1");
+  nav_responsive.classList.remove("nav_responsive_a2")
+})
+
+btn_close_nav.addEventListener("click", ()=>{
+  nav_responsive.classList.remove("nav_responsive_a1");
+  nav_responsive.classList.add("nav_responsive_a2")
+})

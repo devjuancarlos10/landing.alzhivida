@@ -7,6 +7,7 @@
 html{ 
     scroll-snap-type: y mandatory; 
     scroll-behavior: smooth;
+    overflow: hidden;
 }
 
 
@@ -25,7 +26,7 @@ header{
     width: 100%;
     height: 100vh;
     color: #A498F8;
-    overflow: hidden;
+    
 }
 
 .box__clouds{
@@ -39,13 +40,13 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden;
 }
 
 .box_cloud{
     position: relative;
     width: 100%;
     height: 30%;
+    overflow: hidden;
 }
 
 .box__clouds .box_cloud:nth-child(1) .cloud{
@@ -134,16 +135,20 @@ header{
 
 /*Barra de navegación*/
 
+.nav_responsive{
+    display: none;
+}
 
 
 .nav{
     position: fixed;
+    top: 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 100px;
-    z-index: 10;
+    z-index: 100;
     transition-duration: .3s;
 }
 
@@ -353,7 +358,7 @@ h1 span{
 
 .section{
     scroll-snap-align: start;
-    min-height: 60vh;
+    min-height: 30vh;
 }
 
 /*Section 1*/
@@ -437,7 +442,7 @@ h1 span{
 }
 
 /*Secction 2*/
-.section__2, .section__3, .section__4, .section__5, .section__6, .section__7{
+.section__2, .section__3, .section__4, .section__5, .section__6, .section__7 .section__8{
     position: relative;
     background-color: transparent;
     width: 100%;
@@ -445,6 +450,7 @@ h1 span{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .box_phone{
@@ -514,7 +520,7 @@ h1 span{
 .socio{
     position: relative;
     width: 180px;
-    height: 220px;
+    height: 300px;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 15px;
@@ -527,7 +533,6 @@ h1 span{
 .picture_socio{
     width: 100%;
     height: 150px;
-    background-color: #000;
     border-radius: 10px;
     overflow: hidden;
     object-fit: cover;
@@ -606,7 +611,7 @@ h1 span{
 }
 
 .box_networks{
-    width: 50%;
+    width: 100%;
 }
 
 .title_networks{
@@ -810,13 +815,103 @@ h1 span{
 
 
 /*footer*/
-footer{
+.footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 40vh;
+    font-family: "Glacial Indifference", sans-serif;
+    background: linear-gradient(to bottom, #fff, #9e6df8, #7926ff);
+}
+
+.part-foot{
+    display: inline-flex;
+    height: 100%;
+    width: 33%;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-foot{
+    text-align: center;
+}
+
+.list-foot li{
+    text-align: left;
+    list-style: none;
+    margin-top: 10px;
+    font-size: 17px;
+}
+
+.list-foot li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.part2-f{
+    flex-direction: column;
+}
+
+.form-foot{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-family: "Glacial Indifference", sans-serif;
+}
+
+.title-form-foot{
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+.input-email-foot{
+    width: 60%;
+    height: 40px;
+    border: none;
+    padding: 0 10px;
+    background-color: #fff;
+    color: #510b80;
+    font-family: "Glacial Indifference", sans-serif;
+    font-size: 15px;
+}
+
+.input-email-foot:focus{
+    outline: none;
+}
+
+.submit-foot{
+    width: 20%;
+    height: 40px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    color: #510b80;
+    transition-duration: .3s;
+    font-family: "Glacial Indifference", sans-serif;
+    font-size: 15px;
+}
+
+.submit-foot:hover{
+    background-color: #510b80;
+    color: #fff;
+}
+
+.part3-f{
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+}
+
+.copyright{
     width: 100%;
-    height: 50vh;
-    align-items: center;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+.icon-foot{
+    width: 100px;
+    filter: brightness(10);
 }
 
 
@@ -899,4 +994,1073 @@ footer{
     font-family: "Glacial Indifference", sans-serif;
     font-size: 17px;
     cursor: pointer;
+}
+
+
+/*DISEÑO RESPONSIVE*/
+@media (max-width: 1280px) {
+    .reconocimientos{
+        margin-top: 8rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .img__1{
+        width: 400px;
+    }
+    .icon__1{
+        width: 30%;
+    }
+    .nav ul{
+        width: 100%;
+    }
+
+    .title_demo{
+        margin-top: 4rem;
+        font-size: 20px;
+    }
+    .box_phone{
+        height: 70%;
+    }
+
+    .title_section{
+        font-size: 50px;
+    }
+    .reconocimiento{
+        width: 250px;
+    }
+    .title_networks{
+        font-size: 20px;
+    }
+    .network_alzhi{
+        width: 45px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (max-height: 1366px){
+    .nav{
+        height: 150px;
+    }
+    .section{
+        overflow: hidden;
+    }
+
+    .img__1{
+        width: 600px;
+    }
+
+    .h1{
+        font-size: 90px;
+    }
+
+    .slogan_text{
+        font-size: 40px;
+    }
+    .main_description{
+        font-size: 25px;
+    }
+    .title_demo{
+        margin-top: 0;
+        font-size: 50px;
+    }
+
+    .img_sections{
+        height: 80%;
+    }
+
+    .box_socios{
+        height: 90%;
+    }
+
+    .box_s_socios{
+        flex-wrap: wrap;
+    }
+
+    .socio_b{
+        display: flex;
+        justify-content: center;
+        width: 500px;
+        margin-bottom: 6rem;
+    }
+
+    .socio{
+        width: 230px;
+        height: 350px;
+    }
+
+    .picture_socio{
+        height: 55%;
+    }
+
+    .title_us{
+        margin-top: 5rem;
+        font-size: 40px;
+    }
+
+    .title_reconocimientos{
+        margin-top: 10rem;
+    }
+
+    .reconocimientos{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .reconocimientos picture{
+        width: 50%;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .reconocimiento{
+        width: 350px;
+    }
+
+    .title_networks{
+        font-size: 30px;
+    }
+
+    .networks_alzhi{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .networks_alzhi picture{
+        width: 50%;
+        text-align: center;
+        margin-bottom: 6rem;
+    }
+
+    .network_alzhi{
+        width: 60px;
+    }
+
+    .title_form_contact{
+        margin-top: 7rem;
+        font-size: 30px;
+    }
+
+    .box_blocks_form{
+        align-items: center;
+    }
+
+    .block_form{
+        display: inline-flex;
+        width: 70%;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    #name_form_contact, #email_form_contact, #message_form_contact, #case_form_contact, #phone_form_contact{
+        width: 100%;
+        margin-bottom: 3rem;
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+    #message_form_contact{
+        padding: 20px;
+    }
+
+    .input_form_contact{
+        height: 60px;
+        font-size: 20px;
+        padding: 0 20px;
+    }
+
+    #btn_submit_form{
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .title_comments{
+        margin-top: 7rem;
+        font-size: 30px;
+    }
+
+    .comments{
+        flex-wrap: wrap;
+    }
+
+    .comment{
+        width: 40%;
+        height: 400px;
+        margin-bottom: 4rem;
+    }
+
+    .box_avatar_comment{
+        width: 170px;
+        height: 170px;
+    }
+
+    .name_comment{
+        font-size: 25px;
+    }
+
+    .comment_text{
+        font-size: 20px;
+    }
+
+    .footer{
+        flex-wrap: wrap;
+    }
+
+    .part-foot{
+        width: 50%;
+        height: 50%;
+    }
+
+    .list-foot li {
+        font-size: 20px;
+    }
+
+    .part3-f{
+        justify-content: start;
+    }
+
+    .icon-foot{
+        width: 150px;
+    }
+
+    .copyright{
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 912px) {
+    html{
+        scroll-snap-type: proximity;
+        scroll-behavior: smooth;
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+
+    .header{
+        overflow: hidden;
+    }
+    .nav{
+        display: none;
+    }
+
+    .icon_main_res{
+        display: block;
+        position: absolute;
+        top: 1rem;
+        left: 2rem;
+        width: 120px;
+        filter: brightness(10);
+    }
+
+    .nav_responsive{
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: #fff;
+        width: 50%;
+        height: 100%;
+        z-index: 10;
+        border-radius: 30px 0 0 30px;
+    }
+
+    .nav_responsive_a1{
+        right: -100%;
+        animation: nav_res_a1 1s forwards;
+    }
+
+    @keyframes nav_res_a1 {
+        0%{
+            right: -100%;
+        }
+        100%{
+            right: 0%;
+        }
+    }
+
+
+    .nav_responsive_a2{
+        right: 0%;
+        animation: nav_res_a2 1s forwards;
+    }
+
+    @keyframes nav_res_a2 {
+        0%{
+            right: 0%;
+        }
+        100%{
+            right: -100%;
+        }
+    }
+    
+    .lines_btn_nav{
+        position: fixed;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-evenly;
+        top: 2rem;
+        right: 2rem;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        background-color: #fff;
+        z-index: 10;
+        border-radius: 20px;
+    }
+
+    .btn_close_nav{
+        position: absolute;
+        top: -10px;
+        right: 1rem;
+        transform: rotateZ(45deg);
+        color: #7926ff;
+        font-size: 120px;
+    }
+
+    .line{
+        width: 100%;
+        height: 10px;
+        background-color: #7926ff;
+    }
+
+    .list_links_nav_res{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        align-content: space-evenly;
+    }
+
+    .list_links_nav_res a{
+        width: 100%;
+        text-decoration: none;
+    }
+
+    .link_nav_res{
+        list-style: none;
+        width: 100%;
+        text-align: center;
+        font-size: 40px;
+        font-family: "Glacial Indifference", sans-serif;
+    }
+
+    .img__1{
+        width: 800px;
+    }
+
+    .box__titles{
+        
+        top: 30%;
+        right: 8rem;
+    }
+
+    .h1{
+        font-size: 100px;
+    }
+
+    .slogan_text{
+        font-size: 30px;
+    }
+
+    .main_description{
+        width: auto;
+        font-size: 25px;
+    }
+
+    .title_demo{
+        font-size: 50px;
+    }
+
+    .img_sections{
+        height: 800px;
+    }
+
+    .phone_4{
+        margin-right: 5rem;
+    }
+
+    .box_s_socios{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .socio_b{
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        margin-bottom: 5rem;
+        height: auto;
+    }
+
+    .socio{
+        width: 230px;
+        height: auto;
+    }
+
+    .picture_socio{
+        height: auto;
+    }
+
+    .network{
+        width: 40px;
+    }
+
+    .reconocimientos{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+    }
+
+    .title_reconocimientos{
+        margin-top: 10rem;
+        margin-bottom: 0;
+    }
+
+    .reconocimientos picture{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    .reconocimiento{
+        width: 40%;
+        filter: brightness(1);
+    }
+
+    .title_networks{
+        font-size: 30px;
+    }
+
+    .networks_alzhi{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .networks_alzhi picture{
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        margin-bottom: 6rem;
+    }
+
+    .network_alzhi{
+        width: 70px;
+        filter: brightness(1);
+    }
+
+    .title_form_contact{
+        margin-top: 7rem;
+        font-size: 30px;
+    }
+
+    .box_blocks_form{
+        align-items: center;
+    }
+
+    .block_form{
+        display: inline-flex;
+        width: 70%;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    #name_form_contact, #email_form_contact, #message_form_contact, #case_form_contact, #phone_form_contact{
+        width: 100%;
+        margin-bottom: 3rem;
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+    #message_form_contact{
+        padding: 20px;
+    }
+
+    .input_form_contact{
+        height: 60px;
+        font-size: 20px;
+        padding: 0 20px;
+    }
+
+    #btn_submit_form{
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .title_comments{
+        margin-top: 7rem;
+        font-size: 30px;
+    }
+
+    .comments{
+        flex-wrap: wrap;
+    }
+
+    .comment{
+        width: 40%;
+        height: 400px;
+        margin-bottom: 4rem;
+    }
+
+    .box_avatar_comment{
+        width: 170px;
+        height: 170px;
+    }
+
+    .name_comment{
+        font-size: 25px;
+    }
+
+    .comment_text{
+        font-size: 20px;
+    }
+
+    .footer{
+        flex-wrap: wrap;
+    }
+
+    .part-foot{
+        width: 50%;
+        height: 50%;
+    }
+
+    .list-foot li {
+        font-size: 20px;
+    }
+
+    .part3-f{
+        justify-content: start;
+    }
+
+    .icon-foot{
+        width: 150px;
+    }
+
+    .copyright{
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 853px) {
+    .img__1{
+        width: 600px;
+    }
+
+    .box__titles{
+        top: 40%;
+    }
+
+    .lines_btn_nav{
+        width: 80px;
+        height: 80px;
+    }
+
+    .line{
+        height: 7px;
+    }
+
+    .link_nav_res{
+        font-size: 35px;
+    }
+
+    .title_comments{
+        margin-top: 3rem;
+    }
+
+    .part-foot{
+        width: 100%;
+        height: 33%;
+    }
+
+    .list-foot li{
+        font-size: 25px;
+    }
+
+    .list-foot li a{
+        color: #000;
+    }
+
+    .title-form-foot{
+        font-size: 20px;
+    }
+
+    .input-email-foot{
+        width: 40%;
+        font-size: 25px;
+    }
+
+    .submit-foot{
+        font-size: 25px;
+    }
+
+    .part3-f{
+        justify-content: start;
+    }
+
+    .icon-foot{
+        width: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .img__1{
+        width: 500px;
+    }
+
+    .box__titles{
+        right: 10rem;
+    }
+
+    .main_description{
+        width: 130%;
+    }
+
+    .section__2, .section__3, .section__4, .section__5{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img_sections{
+        height: 600px;
+    }
+
+    .box_phone{
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+    }
+
+    .box_description_section{
+        align-content: start;
+        width: 100%;
+        margin-top: 0;
+        height: auto;
+    }
+
+    .phone_4{
+        margin: 0;
+    }
+
+    .title_us{
+        font-size: 25px;
+    }
+
+    .socio_b{
+        margin-bottom: 2rem;
+    }
+
+    .socio{
+        width: 220px;
+        height: auto;
+        padding-bottom: 0;
+    }
+
+    .avatar_socio{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .picture_socio{
+        height: 50%;
+        overflow: hidden;
+    }
+
+    .network{
+        width: 30px;
+    }
+
+    .title_reconocimientos{
+        margin-top: 4rem;
+    }
+
+    .network_alzhi{
+        width: 50px;
+    }
+
+    .title_form_contact{
+        margin-top: 0;
+    }
+
+    .title_comments{
+        margin-top: 0;
+    }
+
+    .comment{
+        width: 270px;
+        height: 300px;
+    }
+
+    .box_avatar_comment{
+        width: 80px;
+        height: 80px;
+    }
+
+    .name_comment{
+        font-size: 20px;
+    }
+
+    .comment_text{
+        font-size: 17px;
+    }
+
+    .list_links_nav_res li{
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 540px) {
+    .icon_main_res{
+        width: 70px;
+    }
+
+    .lines_btn_nav{
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+    }
+
+    .line{
+        height: 5px;
+    }
+
+    .box__titles{
+        top: 40%;
+        right: 7rem;
+    }
+    .h1{
+        font-size: 70px;
+    }
+
+    .slogan_text{
+        font-size: 20px;
+    }
+
+    .picture__1{
+        left: 0;
+    }
+
+    .img__1{
+        width: 400px;
+        left: 0;
+    }
+
+    .main_description{
+        font-size: 18px;
+    }
+
+    .title_demo{
+        font-size: 20px;
+    }
+
+    .box_video_app{
+        width: 100%;
+        text-align: center;
+    }
+
+    .video{
+        width: 85%;
+    }
+
+    .img_sections{
+        height: 500px;
+    }
+
+    .title_section{
+        font-size: 40px;
+        color: #7926ff;
+    }
+
+    .title_us{
+        margin-top: 0rem;
+    }
+
+    .socio{
+        width: 170px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .picture_socio{
+        display: inline-block;
+        width: 80%;
+    }
+
+    .name_socio{
+        font-size: 15px;
+    }
+
+    .networks{
+        margin-top: 5px;
+    }
+
+    .network{
+        width: 20px;
+    }
+
+    .title_reconocimientos{
+        font-size: 25px;
+    }
+
+    .reconocimientos picture{
+        margin-bottom: 2rem;
+    }
+
+    .reconocimiento{
+        width: 30%;
+    }
+
+    .title_networks{
+        margin-top: 0;
+        font-size: 25px;
+    }
+
+    .network_alzhi{
+        width: 30px;
+    }
+
+    #form_contact{
+        margin-top: 2rem;
+    }
+
+    .title_form_contact{
+        font-size: 25px;
+        margin-top: 2rem;
+    }
+
+    .box_blocks_form{
+        width: 100%;
+    }
+
+    .block_form{
+        width: 50%;
+    }
+
+    .input_form_contact{
+        width: 80%;
+        height: 40px;
+    }
+
+    #email_form_contact, #name_form_contact, #case_form_contact, #phone_form_contact{
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    .box_comments{
+        margin-top: 2rem;
+    }
+
+    .title_comments{
+        font-size: 25px;
+    }
+
+    .comment{
+        width: 35%;
+        height: 250px;
+        margin-bottom: 1rem;
+    }
+
+    .name_comment{
+        font-size: 15px;
+    }
+
+    .comment_text{
+        font-size: 12px;
+    }
+
+    .list-foot li{
+        font-size: 15px;
+    }
+
+    .title-form-foot{
+        font-size: 12px;
+    }
+
+    .input-email-foot{
+        font-size: 12px;
+    }
+
+    .submit-foot{
+        font-size: 12px;
+    }
+
+    .icon-foot{
+        width: 40px;
+    }
+
+    .copyright{
+        font-size: 12px;
+    }
+
+    .btn_close_nav{
+        font-size: 70px;
+    }
+
+    .list_links_nav_res li{
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 430px) {
+    .lines_btn_nav{
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .h1{
+        font-size: 50px;
+    }
+
+    .slogan_text{
+        font-size: 20px;
+    }
+
+    .reconocimientos picture{
+        margin-bottom: 3rem;
+    }
+
+    .reconocimiento{
+        width: 60%;
+    }
+
+    .network_alzhi{
+        width: 40px;
+    }
+
+    .block_form{
+        width: 40%;
+    }
+
+    .input_form_contact{
+        height: 50px;
+    }
+
+    #form_contact{
+        margin-top: 4rem;
+    }
+
+    #email_form_contact, #name_form_contact, #case_form_contact, #phone_form_contact{
+        margin-bottom: 25px;
+        font-size: 15px;
+    }
+
+    .comment{
+        height: 300px;
+    }
+}
+
+@media (max-width: 414px) {
+
+    #form_contact{
+        justify-content: center;
+        text-align: center;
+    }
+    .title_form_contact{
+        display: inline-block;
+        width: 40%;
+    }
+}
+
+@media (max-width: 375px) {
+    .box__titles{
+        top: 35%;
+        right: 4rem;
+    }
+    .h1{
+        font-size: 40px;
+    }
+
+    .slogan_text{
+        font-size: 15px;
+    }
+
+    .main_description{
+        font-size: 12px;
+    }
+    .title_section{
+        font-size: 30px;
+    }
+    .img_sections{
+        height: 400px;
+    }
+
+    .title_us{
+        margin-top: 0rem;
+        font-size: 20px;
+    }
+
+    .socio{
+        width: 150px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .picture_socio{
+        display: inline-block;
+        width: 80%;
+    }
+
+    .name_socio{
+        font-size: 10px;
+    }
+
+    .title_reconocimientos{
+        font-size: 20px;
+    }
+
+    .reconocimiento{
+        width: 30%;
+    }
+
+    .title_networks{
+        font-size: 20px;
+    }
+
+    .network_alzhi{
+        width: 30px;
+    }
+    .title_form_contact{
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+    .input_form_contact{
+        height: 30px;
+    }
+
+    #message_form_contact{
+        height: 100px;
+    }
+
+    .title_comments{
+        font-size: 20px;
+    }
+
+    .box_avatar_comment{
+        width: 40px;
+        height: 40px;
+    }
+
+    .name_comment{
+        font-size: 10px;
+    }
+
+    .comment_text{
+        font-size: 10px;
+    }
+
+    .comment{
+        height: 250px;
+    }
+
+    .btn_close_nav{
+        right: 5px;
+        font-size: 55px;
+    }
 }

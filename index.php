@@ -12,6 +12,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <img src="./ICONS/2.png" class="icon_main_res" alt="" srcset="">
+    <div class="lines_btn_nav">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <nav class="nav_responsive">
+        <span class="btn_close_nav">
+            +
+        </span>
+        <ul class="list_links_nav_res">
+            <a href="#"><li class="link_nav_res">Inicio</li></a>
+            <a href="#aplication"><li class="link_nav_res">Aplicación</li></a>
+            <a href="#"><li class="link_nav_res">Blog</li></a>
+            <a href="#us"><li class="link_nav_res">Nosotros</li></a>
+            <a href="#contact"><li class="link_nav_res">Contáctanos</li></a>
+            <a href="#"><li class="link_nav_res">Pre-regístrate</li></a>
+        </ul>
+    </nav>
     <div class="box_register_preview">
         <span class="close_register">+</span>
         <form action="register_preview.php" method="post" id="form_preview">
@@ -116,7 +135,7 @@
                 CUIDA
             </h5>
         </div>
-        <div class="box_phone">
+        <div class="box_phone phone_4">
             <img src="./IMGS/iphone4.png" class="img_sections" alt="" srcset="">
         </div>
     </section>
@@ -207,7 +226,7 @@
                     <img src="./IMGS/61690094315b33073b5d7f1b_1-01.jpg" class="reconocimiento" alt="" srcset="">
                 </picture>
             </div>
-        </div>
+        </div><br>
         <div class="box_networks">
             <h3 class="title_networks">
                 REDES SOCIALES
@@ -303,7 +322,26 @@
         </div>
     </section>
     <footer class="section footer">
-
+        <div class="part-foot part1-f">
+            <ul class="list-foot">
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Políticas de privacidad</a></li>
+            </ul>
+        </div>
+        <div class="part-foot part2-f">
+            <p class="title-form-foot">Suscribete para recibir notificaciones</p>
+            <form action="suscribed.php" method="post" class="form-foot">
+                <input type="email" placeholder="Email:" class="input-email-foot">
+                <input type="submit" class="submit-foot">
+            </form>
+            
+        </div>
+        <div class="part-foot part3-f">
+            <a href="#">
+                <img src="./ICONS/2.png" class="icon-foot" alt="" srcset="">
+            </a>
+            <p class="copyright">Copyright @ 2024 Alzhivida. Todos los derechos reservados.</p>
+        </div>
     </footer>
     <script src="./JS/main.js"></script>
     <script src="./JS/animations_main.js"></script>

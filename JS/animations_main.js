@@ -61,15 +61,3 @@ observer3.observe(section_1)
 
 
 
-//animación para los socios-fundadores
-let socios = document.getElementsByClassName("socio");
-
-for(let i=0; i<socios.length; i++){
-  socios[i].addEventListener("mouseover", ()=>{
-    socios[i].style.height = "300px";
-  })
-
-  socios[i].addEventListener("mouseout", ()=>{
-    socios[i].style.height = "220px"
-  })
-}
